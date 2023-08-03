@@ -107,5 +107,9 @@ dependencies {
     //room testing
     testImplementation("androidx.room:room-testing:$room_version")
 
+    //volley
+    implementation("com.android.volley:volley:1.2.1")
+
+
 
 }
