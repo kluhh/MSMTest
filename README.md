@@ -31,7 +31,8 @@ Gson
 
 Mockito
 
-Firebase
+Room
+
 
 API
-Market summary: https://yh-finance.p.rapidapi.com/market/v2/get-summary
+ People: https://raw.githubusercontent.com/Joe886/testfiles/master/people.json
