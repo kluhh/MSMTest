@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MSMTest</string>
+    <string name="text_home">Home</string>
+    <string name="text_details">Detail</string>
 </resources>

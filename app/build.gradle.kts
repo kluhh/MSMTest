@@ -37,7 +37,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -58,24 +58,18 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.2")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.ui:ui:1.0.0")
+    implementation("androidx.compose.ui:ui-graphics:1.0.0")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.0.0")
+    implementation("androidx.compose.material3:material3:1.0.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
 
-    //testing
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+
 
     //dagger-hilt
     implementation("com.google.dagger:hilt-android:2.44")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
-    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
+//    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
     kapt("com.google.dagger:hilt-compiler:2.44")
 
     //Retrofit
@@ -95,6 +89,21 @@ dependencies {
     //Glide
     implementation("com.github.bumptech.glide:glide:4.15.1")
 
+    //coil
+    implementation ("io.coil-kt:coil-compose:1.3.2")
+
+
+//    implementation ("androidx.navigation:navigation-compose:2.4.0-alpha06")
+//    compose navigation
+//    implementation ("androidx.navigation:navigation-compose:1.0.0")
+
+    // navigation animation
+    implementation ("com.google.accompanist:accompanist-navigation-animation:0.16.0")
+
+// https://mvnrepository.com/artifact/com.google.accompanist/accompanist-navigation-animation
+//    implementation("com.google.accompanist:accompanist-navigation-animation:0.29.1-alpha")
+
+
     //room
     val room_version = "2.5.2"
     implementation("androidx.room:room-runtime:$room_version")
@@ -109,5 +118,13 @@ dependencies {
     implementation("com.android.volley:volley:1.2.1")
 
 
+    //testing
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 
 }
