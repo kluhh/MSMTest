@@ -10,6 +10,8 @@ import com.example.msmtest.data.database.AppDatabase
 import com.example.msmtest.data.database.dao.PeopleDAO
 import com.example.msmtest.data.remote.Api
 import com.example.msmtest.data.respository.Repository
+import com.example.msmtest.domain.respository.InternetConnectivityChecker
+import com.example.msmtest.domain.respository.InternetConnectivityHelperImpl
 import com.example.msmtest.domain.respository.RepositoryImpl
 import dagger.Module
 import dagger.Provides
@@ -44,12 +46,23 @@ object AppModule {
             .create(Api::class.java)
     }
 
-
-    @Provides
     @Singleton
-    fun provideRepository(api: Api, peopleDAO: PeopleDAO, context: Context): Repository {
-        return RepositoryImpl(api, peopleDAO,context)
+    @Provides
+    fun provideInternetConnectivityChecker(): InternetConnectivityChecker = InternetConnectivityHelperImpl()
+
+
+
+    @Singleton
+    @Provides
+    fun provideRepository(
+        api: Api,
+        peopleDAO: PeopleDAO,
+        @ApplicationContext app: Context,
+        internetConnectivityChecker: InternetConnectivityChecker // Add this parameter
+    ): Repository {
+        return RepositoryImpl(api, peopleDAO, app, internetConnectivityChecker)
     }
+
 
     @Provides
     fun providePeopleDAO(appDatabase: AppDatabase): PeopleDAO {

@@ -117,6 +117,12 @@ dependencies {
     //volley
     implementation("com.android.volley:volley:1.2.1")
 
+    //mockito
+    testImplementation("org.mockito:mockito-core:5.4.0")
+    implementation("org.mockito.kotlin:mockito-kotlin:3.2.0")
+
+
+
 
     //testing
     testImplementation("junit:junit:4.13.2")

@@ -12,12 +12,11 @@ import javax.inject.Inject
 
 
 class RepositoryImpl @Inject constructor(
-    private val api: Api, private val peopleDAO: PeopleDAO, private val context: Context
+    private val api: Api, private val peopleDAO: PeopleDAO, private val context: Context,     private val internetConnectivityChecker: InternetConnectivityChecker
 ) : Repository {
     override suspend fun getPeople(): List<PeopleItemDto> {
-        val isInternetConnected = InternetConnectivityHelper.isInternetAvailable(context)
 
-        if (isInternetConnected) {
+        if (internetConnectivityChecker.isInternetAvailable(context)) {
             val apiPeople = api.getAllPeople().people ?: emptyList()
             val dbPeople = withContext(Dispatchers.IO) {
                 peopleDAO.getAllPeople()
