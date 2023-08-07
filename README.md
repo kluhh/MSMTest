@@ -1,8 +1,5 @@
 # MSMTest
 
-![GitHub Cards Preview](https://github.com/Spikeysanju/Wiggles/blob/main/art/GITHUB-COVER.png?raw=true)
-
-# Wiggles
 Beautiful MSM test app built to Demonstrate Android development for Android Dev Challenge *Made with love ❤️ 
 
 <br />
@@ -23,9 +20,9 @@ Home | Details
 <br />
 
 ## We Support Dark Mode Too 🌚
-Home | Details | Details (Scrolled)
---- | --- | --- |
-![](https://github.com/Spikeysanju/Wiggles/blob/main/art/Dark-Home.png) | ![](https://github.com/Spikeysanju/Wiggles/blob/main/art/Dark-Details.png) | ![](https://github.com/Spikeysanju/Wiggles/blob/main/art/Dark-Details-Scrolled.png)
+Home | Details
+--- | --- |
+![](https://github.com/kluhh/MSMTest/assets/14086636/8c85ddd8-d31c-403f-9298-2f36e357eec2) | ![](https://github.com/kluhh/MSMTest/assets/14086636/ef11178c-1a27-4518-88b3-862d60af95b4) 
 
 <br />
 
