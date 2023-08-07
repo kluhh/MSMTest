@@ -3,15 +3,13 @@ package com.example.msmtest.di
 import android.app.Application
 import android.content.Context
 import androidx.room.Room
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.msmtest.common.Constants
 import com.example.msmtest.data.database.AppDatabase
 import com.example.msmtest.data.database.dao.PeopleDAO
 import com.example.msmtest.data.remote.Api
 import com.example.msmtest.data.respository.Repository
-import com.example.msmtest.domain.respository.InternetConnectivityChecker
-import com.example.msmtest.domain.respository.InternetConnectivityHelperImpl
+import com.example.msmtest.util.InternetConnectivityChecker
+import com.example.msmtest.util.InternetConnectivityHelperImpl
 import com.example.msmtest.domain.respository.RepositoryImpl
 import dagger.Module
 import dagger.Provides

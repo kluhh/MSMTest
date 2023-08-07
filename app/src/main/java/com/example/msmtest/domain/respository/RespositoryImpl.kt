@@ -5,7 +5,7 @@ import com.example.msmtest.data.database.dao.PeopleDAO
 import com.example.msmtest.data.remote.Api
 import com.example.msmtest.data.remote.dto.PeopleItemDto
 import com.example.msmtest.data.respository.Repository
-import com.example.msmtest.util.InternetConnectivityHelper
+import com.example.msmtest.util.InternetConnectivityChecker
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject

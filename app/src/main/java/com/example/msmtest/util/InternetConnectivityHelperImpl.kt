@@ -1,7 +1,6 @@
-package com.example.msmtest.domain.respository
+package com.example.msmtest.util
 
 import android.content.Context
-import com.example.msmtest.util.InternetConnectivityHelper
 
 class InternetConnectivityHelperImpl : InternetConnectivityChecker {
     override fun isInternetAvailable(context: Context): Boolean {
