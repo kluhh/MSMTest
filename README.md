@@ -54,17 +54,9 @@ Internet
 
 ## Architecture "CLEAN"
 
-Dipendency Injection
-
-Repository
-
-ViewModel
-
-Presentation
-
-Use Cases
 
 ## Libraries
+Libraries
 Compose
 
 Retorfit
@@ -122,3 +114,5 @@ See [Contributing Guidelines](https://github.com/kluhh/MSMTest).
 
 
 
+API
+ People: https://raw.githubusercontent.com/Joe886/testfiles/master/people.json
