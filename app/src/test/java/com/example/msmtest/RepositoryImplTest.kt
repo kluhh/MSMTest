@@ -58,8 +58,6 @@ class RepositoryImplTest {
 
         val result = repository.getPeople()
 
-        // Depending on your expected behavior, adjust this.
-        // For this example, I'm expecting an empty list:
         assertEquals(emptyList<PeopleItemDto>(), result)
     }
 
@@ -67,12 +65,12 @@ class RepositoryImplTest {
     fun `test fetch without internet with data in database`() = runBlocking {
         // Mock no internet and data in the database
         whenever(internetConnectivityChecker.isInternetAvailable(mockContext)).thenReturn(false)
-        whenever(peopleDAO.getAllPeople()).thenReturn(mockDatabaseResponse)
+        whenever(peopleDAO.getAllPeople()).thenReturn(mockDataBaseResponse)
 
         val result = repository.getPeople()
 
         // The result should be the mockDatabaseResponse since it fetches from the local database
-        assertEquals(mockDatabaseResponse, result)
+        assertEquals(mockDataBaseResponse, result)
     }
 
 
@@ -80,7 +78,8 @@ class RepositoryImplTest {
 
 
     // Mock data and context
-    private val mockApiResponse = PeopleModel(listOf(PeopleItemDto(/* ... */)))
-    private val mockDatabaseResponse = listOf(PeopleItemDto(/* ... */))
+    private val mockApiResponse = PeopleModel(listOf(PeopleItemDto(0,"picture.com","23July","",null,"Teacher" +
+            "")))
+    private val mockDataBaseResponse = listOf(PeopleItemDto(0,"james.com","","","Roberts",""))
     private var mockContext: Context = mock()
 }
