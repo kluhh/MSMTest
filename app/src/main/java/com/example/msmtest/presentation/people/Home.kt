@@ -34,7 +34,7 @@ val peopleViewModel : PeopleViewModel = hiltViewModel()
             ItemPeopleCard(
                 it,
                 onItemClicked = { people ->
-                    navController.navigate("details/${people.firstName}/${people.dateOfBirth}")
+                    navController.navigate("Details/${people.firstName}")
                 }
             )
         }

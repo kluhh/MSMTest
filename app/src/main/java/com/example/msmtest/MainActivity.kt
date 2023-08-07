@@ -38,16 +38,17 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+    }
+    private fun setDayTheme() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+    }
+
+    private fun setDarkTheme() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
     }
 }
 
-private fun setDayTheme() {
-    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-}
-
-private fun setDarkTheme() {
-    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-}
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {

@@ -28,21 +28,6 @@ fun TopBar(onToggle: () -> Unit) {
             .fillMaxWidth()
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(
-                text = "Hey Spikey,",
-                textAlign = TextAlign.Start,
-//                style = MaterialTheme.typography.h5,
-//                color = MaterialTheme.colors.surface
-            )
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            Text(
-                text = "Adopt a new friend near you!",
-                textAlign = TextAlign.Start,
-//                style = MaterialTheme.typography.subtitle1,
-//                color = MaterialTheme.colors.surface
-            )
         }
         Row(
             modifier = Modifier

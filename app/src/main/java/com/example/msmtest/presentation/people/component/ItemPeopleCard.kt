@@ -67,8 +67,6 @@ fun ItemPeopleCard(people: PeopleItemModel, onItemClicked: (people: PeopleItemMo
                 Text(
                     text = buildString {
                         append(people.dateOfBirth)
-                        append("yrs | ")
-//                        append(people.)
                     },
                     modifier = Modifier.padding(0.dp, 0.dp, 12.dp, 0.dp),
 //                    color = MaterialTheme.colors.surface,
